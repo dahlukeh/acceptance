@@ -1,6 +1,5 @@
 package framework.interfaces.activators;
 
-import framework.cards.Card;
 
 /**
  * A component of the CardActivator family.
@@ -11,15 +10,15 @@ import framework.cards.Card;
  */
 public interface CardSelector {
 
-    /**
-     * The user chooses a card from a pile.
-     *
-     * <p>
-     * The choice is specified by the name of the choosen card. You are
-     * to pick the first such card in the pile with this name.
-     * </p>
-     *
-     * @param choosen The card that was picked
-     */
-    void chooseCardFromPile (Card choosen);
+   /**
+    * The user chooses a card from a pile.
+    *
+    * <p>
+    * The tester will get your discard pile, and scan through it for the card required.
+    * So, the card they have choosen will be at getDiscard().get(indexOfCard);
+    * </p>
+    *
+    * @param indexOfCard the index of the card to use
+    */
+   void chooseCardFromPile (int indexOfCard);
 }
